@@ -245,15 +245,16 @@
 
 .container-img {
     width: 100%;
-    padding-top: calc(900px - var(--header-height));
-    background-size: cover;
+    height: 700px;
     background-position: center;
     position: relative;
     display: none;
+    align-items: center;
+    justify-content: flex-end;
 }
 
 .container-img--active {
-    display: block;
+    display: flex;
 }
 
 .container-img::before {
@@ -284,9 +285,7 @@
 }
 
 .sale-info--circle {
-    position: absolute;
-    top: 84px;
-    right: 90px;
+    position: relative;
     width: 600px;
     height: 600px;
     border-radius: 300px;
@@ -299,6 +298,7 @@
     padding: 110px 0;
     cursor: default;
     user-select: none;
+    margin-right: 90px;
 }
 
 .sale-info--circle-icon {
@@ -363,7 +363,7 @@
 .container__title-primary {
     font-size: 36px;
     color: #555555;
-    margin: 0 0 50px;
+    margin: 0 0 0px;
 }
 
 .container__title-primary u {
@@ -385,16 +385,22 @@
 }
 
 .container__info-package {
+    width: 100%;
+    height: 360px;
     position: relative;
-    /* sua */
+}   
+
+.container__info-main {
+    margin-top: 20px;
+}
+
+.container__info-item {
+    margin-top: 24px;
 }
 
 .container__info-package-img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: calc(100% - 24px);
-    height: 360px;
+    width: 100%;
+    height: 100%;
 }
 
 .container__info-package-sym {
@@ -439,7 +445,6 @@
     right: 0;
     bottom: 0;
     background-color: #14b9d5;
-    margin-right: 24px;
     color: var(--white-color);
     display: none;
     flex-direction: column;
@@ -448,9 +453,8 @@
     animation: fadeIn linear 0.4s;
 }
 
-.container__info-package:hover .container__info-package-destination--asia {
+.container__info-package--asia:hover .container__info-package-destination--asia {
     display: flex;
-    /* sua */
 }
 
 .container__info-package--europe:hover .container__info-package-destination--europe {
@@ -581,6 +585,8 @@
 }
 
 .proposals-content {
+    width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -622,6 +628,7 @@
     letter-spacing: 2px;
     font-weight: 400;
     display: block;
+    text-shadow: 1px 1px 2px #000;
 }
 
 .search-destination__title-main {
@@ -825,9 +832,12 @@
 .company-info-wrapper {
     height: 100%;
     display: flex;
+    flex-wrap: wrap;
 }
 
 .company-info-content {
+    width: 100%;
+    height: 100%;
     color: var(--white-color);
     display: flex;
     height: 100%;
@@ -1118,6 +1128,7 @@
 }
 
 .footer__right {
+    width: 100%;
     background-color: var(--primary-color);
     display: flex;
     justify-content: space-between;
@@ -1196,6 +1207,91 @@
 .button-price-fixed-link-icon img{
     width: 15px;
     height: 15px;
+}
+
+
+/* Responsive Component */
+.header__nav-mobile-menu {
+    display: none;
+    margin-top: 8px;
+    font-size: 25px;
+    color: #9a9a9a;
+}
+.mobile-menu__list {
+    width: 60%;
+    max-width: 300px;
+    height: 100%;
+    margin: 0;
+    list-style: none;
+    padding: 40px;
+    position: fixed;
+    right: 0;
+    top: 0;
+    height: 100%;
+    background-color: var(--primary-color);
+    z-index: 10;
+    overflow-y: auto;
+    transform: translateX(100%);
+    opacity: 0;
+    transition: transform linear 0.3s, opacity linear 0.3s;
+    will-change: transform, opacity;
+}
+
+.mobile-menu__list-close-btn {
+    position: absolute;
+    top: 18px;
+    right: 18px;
+    font-size: 26px;
+    color: var(--white-color);
+}
+
+.mobile-menu__item {
+    padding-bottom: 20px;
+}
+
+.mobile-menu__item-link {
+    display: block;
+    padding: 10px 0;
+    font-size: 25px;
+    color: var(--white-color);
+    letter-spacing: 1px;
+    font-weight: 400;
+    text-decoration: none;
+}
+
+.mobile-sub-menu__list{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.mobile-sub-menu__item {
+    padding: 0 20px;
+}
+
+.mobile-sub-menu__link {
+    display: block;
+    font-size: 14px;
+    color: var(--white-color);
+    padding: 10px 0;
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+
+#checkbox-menu {
+    display: none;
+} 
+
+.mobile-overplay {
+    display: none;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 5;
+    animation: fadeIn linear 0.3s;
 }
 
 

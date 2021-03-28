@@ -9,7 +9,7 @@
     --header-add-height: 38px;
     --header-nav-height: 78px;
     --header-height: calc( (var(--header-add-height) + var(--header-nav-height)) );
-    --border-rad: 30px
+    --border-rad: 30px;
 }
 
 * {
