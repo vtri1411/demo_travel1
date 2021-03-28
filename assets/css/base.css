@@ -1,0 +1,89 @@
+:root {
+    --primary-color: #14b9d5;
+    --white-color: #fff;
+    --header-color: #0071a7;
+    --text-color: #767475;
+    --hot-color: #f00;
+    --extra--text-color: #9a9a9a;
+
+    --header-add-height: 38px;
+    --header-nav-height: 78px;
+    --header-height: calc( (var(--header-add-height) + var(--header-nav-height)) );
+    --border-rad: 30px
+}
+
+* {
+    box-sizing: inherit;
+}
+
+body {
+    box-sizing: border-box;
+    font-family: 'Open Sans';
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: var(--border-rad);
+}
+
+.label {
+    font-size: 10px;
+    height: 16px;
+    line-height: 16px;
+    color: var(--white-color);
+    padding: 0 4px;
+    border-radius: 3px;
+}
+
+.label--hot {
+    background-color: rgb(255 0 0 / 65%);
+}
+
+.label--best {
+    background-color: #14b9d5;
+}
+
+.label--new {
+    background-color: #1bbc9b;
+}
+
+.arrow-right {
+    color: var(--text-color);
+    font-size: 18px;
+}
+
+.small-menu {
+    position: absolute;
+    top: 0;
+    left: calc(100% + 20px);
+    width: 190px;
+    padding-left: 0;
+    background-color: var(--white-color);
+    box-shadow: 0px 2px 5px #f1f1f1;
+    border-radius: 3px;
+    list-style: none;
+    display: none;
+}
+
+
+/* For small menu at header navbar */
+.small-menu::before {
+    content: "";
+    display: block;
+    height: 100%;
+    width: 18px;
+    position: absolute;
+    top: 0;
+    left: -19px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    } 
+    to {
+        opacity: 1;
+    }
+}
