@@ -858,7 +858,6 @@
     font-size: 60px;
     font-weight: 400;
     margin: 0 10px 0 0;
-    text-shadow: 1px 1px 2px #000;
 }
 
 .company-info-content-normal {
@@ -867,7 +866,6 @@
     line-height: 28px;
     font-weight: 600;
     transform: translateY(2px);
-    text-shadow: 1px 1px 2px #000;
     /* add sth */
 }
 
