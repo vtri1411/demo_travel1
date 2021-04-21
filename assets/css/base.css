@@ -19,6 +19,7 @@
 body {
     box-sizing: border-box;
     font-family: 'Open Sans';
+    margin: 0;
 }
 
 .btn {
@@ -57,7 +58,7 @@ body {
 .small-menu {
     position: absolute;
     top: 0;
-    left: calc(100% + 20px);
+    left: calc(100% + 2px);
     width: 190px;
     padding-left: 0;
     background-color: var(--white-color);

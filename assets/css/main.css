@@ -1157,8 +1157,8 @@
     font-size: 25px;
     letter-spacing: 1px;
     background-color: #555;  
-    width: 65px;
-    height: 65px;
+    width: 60px;
+    height: 60px;
     border-radius: 33px;
     
 }
@@ -1172,6 +1172,7 @@
     text-decoration: none;
     color: var(--white-color);
     margin-left: 1px;
+    transform: translateY(2px);
 }
 
 .button-price-fixed-link span {
